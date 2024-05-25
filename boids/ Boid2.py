@@ -118,7 +118,9 @@ class Game:
         self.running = True
         pygame.display.set_caption("Boids")
         self.surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-        self.surface.fill(WHITE)
+        # self.surface.fill(WHITE)
+        self.background_image = pygame.image.load('vector-sky-background-417502006.jpg')
+        self.surface.blit(self.background_image, (0,0))
         self.boids = [Boid() for _ in range(NUM_BOIDS)]  # Create boids and add them to the list
 
     def run(self):
@@ -128,7 +130,8 @@ class Game:
                 if event.type == QUIT:
                     self.running = False
 
-            self.surface.fill(WHITE)  # Clear the screen
+            # Clear the screen
+            self.surface.blit(self.background_image, (0,0))
             for boid in self.boids:
                 boid.flock(self.boids)  # Apply flocking behavior
                 boid.update()           # Update boid position
