@@ -3,6 +3,8 @@ from pygame.locals import *
 from config import *
 import boid as boid
 
+# Finished hackathon 9:57 PM
+
 class Game:
     def __init__(self):
         pygame.init()

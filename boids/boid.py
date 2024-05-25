@@ -3,6 +3,8 @@ import random
 import time
 from config import *
 
+# Finished hackathon 9:57 PM
+
 class Boid:
     def __init__(self):
         self.position = pygame.Vector2(random.uniform(0, WINDOW_WIDTH), random.uniform(0, WINDOW_HEIGHT))
